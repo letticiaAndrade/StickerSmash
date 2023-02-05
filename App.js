@@ -1,8 +1,8 @@
 import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View } from 'react-native';
 
-import ImageViewer from './.ImageViewer';
-import Button from './Button'
+import ImageViewer from './components/ImageView';
+import Button from './components/Button'
 
 const PlacehoulderImage = require('./assets/images/background-image.png')
 
@@ -10,7 +10,7 @@ export default function App() {
   return (
     <View style={styles.container}>
       <View style= {styles.imageContainer}> 
-        <ImageViewer placehoulderImageImageSource ={PlacehoulderImage}/>
+        <ImageViewer placehoulderImageSource ={PlacehoulderImage}/>
       </View>
       <View style= {styles.footerContainer}>
         <Button label={ "Choose a photo"}/>
