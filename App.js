@@ -2,6 +2,7 @@ import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View } from 'react-native';
 
 import ImageViewer from './components/ImageViewer';
+import Button from './components/Button'
 
 const PlacehoulderImage = require('./assets/images/background-image.png')
 
