@@ -9,13 +9,24 @@ const PlacehoulderImage = require('./assets/images/background-image.png')
 export default function App() {
   return (
     <View style={styles.container}>
-        < ImageViewer placehoulderImage style = {PlacehoulderImage}/>
+      <View style= {styles.imageContainer}> 
+        <ImageViewer placehoulderImageImageSource ={PlacehoulderImage}/>
+      </View>
+      <View style= {styles.footerContainer}>
+        <Button label={ "Choose a photo"}/>
+        <Button label={ "Use this photo"}/>
+        </View>
       <StatusBar style="auto" />
     </View>
   );
 }
 
 const styles = StyleSheet.create({
+
+  footerContainer: {
+    flex: 1/3,
+    alignItems: 'center',
+  },
   container: {
     flex: 1,
     backgroundColor: '#25292e',
@@ -30,5 +41,6 @@ const styles = StyleSheet.create({
     width: 320,
     height: 440,
     borderRadius: 18,
-  }
+  },
+ 
 });
