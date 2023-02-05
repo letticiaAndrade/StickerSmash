@@ -1,13 +1,14 @@
 import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View } from 'react-native';
 
+import ImageViewer from './components/ImageViewer';
+
 const PlacehoulderImage = require('./assets/images/background-image.png')
 
 export default function App() {
   return (
     <View style={styles.container}>
-      <Text style = {{color: '#fff'}}>Open up App.js to start working on your app!</Text>
-        < image source = {PlacehoulderImage} style = {styles.image}/>
+        < ImageViewer placehoulderImage style = {PlacehoulderImage}/>
       <StatusBar style="auto" />
     </View>
   );
