@@ -1,12 +1,29 @@
 import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View } from 'react-native';
-
+import * as ImagePicker from 'react-native';
 import ImageViewer from './components/ImageView';
 import Button from './components/Button'
+import react from 'react';
 
 const PlaceholderImage = require('./assets/images/background-image.png')
 
 export default function App() {
+    const pickImageAsync = async() => {
+      let result = await ImagePicker.launchImageLibraryAsync({
+        allowsEditing: true,
+        quality: 1,
+      })
+    
+
+    if (!result.canceled) {
+      console.log(result);
+    } else {
+      alert('Você não selecionou nenhuma imagem.')
+    }
+  };
+
+
+
   return (
     <View style={styles.container}>
       <View style= {styles.imageContainer}> 
